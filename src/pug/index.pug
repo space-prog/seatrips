@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/style.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        title Document
+    body
+        .container-fluid.bg1 
+            .container-xl
+                nav.navbar.navbar-expand-lg(data-bs-theme='dark').py-4
+                    .container-fluid
+                        a.navbar-brand(href='#') 
+                            img(src="img/logo.png", alt="logo")
+                        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+                            span.navbar-toggler-icon
+                        #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
+                            ul.navbar-nav.mb-2.mb-lg-0.gap-4
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') Головна
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') послуги
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') про компанію
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') Акції
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') Партнери
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') відгуки
+                                li.nav-item
+                                    a.text-uppercase.nav-link.hover_a(href='#') Контакти
+            .container.adv.text-center
+                h1 Морські пригоди
+                .container-fluid.justify-content-center.d-flex
+                    p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                button.btn.px-4.py-2(type='button') детальніше
+        script(src="js/scripts.js") 

@@ -1,0 +1,57 @@
+body
+    background-color: #f5f8fa
+    font-family: "Rubik"
+
+h1
+    font-size: 72px
+    font-weight: 400
+    letter-spacing: 1px
+    text-transform: uppercase
+
+.hover_a
+    color: #fff
+    letter-spacing: 1px
+    font-size: 14px
+    &:hover
+        color: #ffb700
+
+.bg1
+    background: no-repeat center/cover url("../img/bg1.webp")
+
+.adv
+    color: #fff
+    width: 50%
+    &::before
+        content: ""
+        display: block
+        left: 50%
+        transform: translateX(50%)
+        border-top: 4px solid #fff
+        border-left: 4px solid #fff
+        border-right: 4px solid #fff
+        opacity: 0.3
+        width: 370px
+        height: 40px
+    &::after
+        content: ""
+        display: block
+        left: 50%
+        transform: translateX(50%)
+        border-bottom: 4px solid #fff
+        border-left: 4px solid #fff
+        border-right: 4px solid #fff
+        opacity: 0.3
+        width: 370px
+        height: 40px
+    p
+        font-style: italic
+        width: 528px
+    button
+        background-color: #ffb700
+        color: #fff
+        border-radius: 22px
+        box-shadow: 0 0 1px 1px rgba(193,139,1,0.24)
+        text-transform: uppercase
+        &:hover
+            background-color: #ffb700
+            color: #000
