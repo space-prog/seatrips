@@ -1,0 +1,11 @@
+mixin card(src, title, price, cardtext)
+  .card(style="width: 18rem;")
+    .badge-star
+        span.star
+            img(src="img/star.png", alt="star")
+    img.card-img-top(src=src, alt="card image")
+    .card-body
+      h5.card-name= title 
+      p.price= price
+        span *
+      p.card-text= cardtext

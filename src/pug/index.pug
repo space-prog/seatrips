@@ -9,8 +9,9 @@ html(lang="en")
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         title Document
     body
+        include components/mixin.pug
         .container-fluid.bg1 
-            .container-xl
+            .container-xl.navbarm
                 nav.navbar.navbar-expand-lg(data-bs-theme='dark').py-4
                     .container-fluid
                         a.navbar-brand(href='#') 
@@ -36,6 +37,34 @@ html(lang="en")
             .container.adv.text-center
                 h1 Морські пригоди
                 .container-fluid.justify-content-center.d-flex
-                    p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-                button.btn.px-4.py-2(type='button') детальніше
+                    p.italic Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                button.btn.px-4.mb-5.py-2(type='button') детальніше
+            .container-fluid.choose-adv
+                .container-xl.text-center
+                    .container.h2
+                        h2 обери свій план подорожі
+                    p.italic Наша фірма - лідер на ринку у своїй сфері
+                    a(href="#choose") 
+                        img(src="img/arr.png", alt="double arrow")
+        .container-xl.choose#choose
+            .row 
+                .col 
+                    .card(style='width: 350px;').about
+                        .card-body
+                            .row
+                                h2.card-title ПРО НАШУ КОМПАНІЮ
+                                p.card-text.italic.text-dark.pfirst
+                                  | Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                            .row
+                                .btn-about
+                                    a.btn.btn-warning.rounded-pill.text-light.more(href='#') ДЕТАЛЬНІШЕ
+                                p.text-body-tertiary.starprice * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                .col
+                    +card('/img/bicucle.png', "Тур на велосипедах", "335 грн", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.")
+                .col.featured
+                    +card('/img/circle.png', "Екскурсія на острів", "500 грн", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.")
+                    .row 
+                        a(href="#").text-center дивитись усі плани
+                .col.featured
+                    +card('/img/pupil.png', "Особливе замовлення", "250 грн", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.")
         script(src="js/scripts.js") 
