@@ -1,3 +1,4 @@
+
 =card($featured: false)
     .card-img-top
         width: 50px
@@ -56,3 +57,7 @@
             display: block
         .badge-star
             background: #26cb15
+
+=media ($size)
+    @media screen and (min-width:#{$size}px)
+        @content

@@ -11,11 +11,13 @@ body
 
 h1
     display: inline-block
-    font-size: 72px
+    font-size: 50px
     font-weight: 400
     letter-spacing: 1px
     text-transform: uppercase
     padding-top: 46px
+    +media(768)
+        font-size: 72px
 
 hr
     border: none
@@ -35,35 +37,42 @@ hr
 .adv
     position: relative
     color: #fff
-    width: 50%
+    +media(768)
+        width: 50%
     &::before
         content: ""
         position: absolute
-        display: block
+        display: none
         left: 50%
         transform: translateX(-50%)
         border-top: 4px solid #fff
         border-left: 4px solid #fff
         border-right: 4px solid #fff
         opacity: 0.3
-        width: 370px
-        height: 40px
+        // width: 370px
+        height: 10%
+        width: 50%
         top: 0
+        +media(768)
+            display: block
     &::after
         content: ""
         position: absolute
-        display: block
+        display: none
         left: 50%
         transform: translateX(-50%)
         border-bottom: 4px solid #fff
         border-left: 4px solid #fff
         border-right: 4px solid #fff
         opacity: 0.3
-        width: 370px
-        height: 93px
+        // width: 370px
+        height: 30%
         bottom: 0
+        width: 50%
+        +media(768)
+            display: block
     p
-        width: 528px
+        // width: 528px
     button
         background-color: #ffb700
         color: #fff
@@ -75,7 +84,7 @@ hr
             color: #000
 
 .h2
-    width: 340px
+    // width: 340px
     h2
         font-size: 36px
         letter-spacing: 1px
@@ -90,16 +99,18 @@ hr
     padding-bottom: 87px
 
 .choose
-    .col
+    figure
         +card()
-    .col.featured
+    .featured
         +card($featured: true)
 
 .navbarm
-    padding-bottom: 190px
+    padding-bottom: 20%
+    +media(768)
+        padding-bottom: 5%
 
 .about
-    width: 500px
+    // width: 500px
     *
         text-align: left
     h2
@@ -120,8 +131,8 @@ hr
         padding-top: 20px
         font-size: 13px
         line-height: 19px
-    &:hover
-        background: #f5f8fa
+    background: #f5f8fa
+    border: none
 
 .italic
     font-style: italic
@@ -170,8 +181,6 @@ hr
     
 
 .clientPhoto
-    width: 86px
-    height: 86px
     bottom: 0
     transform: translate(-50%, 50%)
 
@@ -181,3 +190,12 @@ hr
     width: 42px
     height: 37px
     fill: #ffb700
+
+.main-text-review
+    font-size: 40px
+    letter-spacing: 2px
+    line-height: 45px
+    font-weight: 400
+    +media(768)
+        font-size: 56px
+        line-height: 66px
