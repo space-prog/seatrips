@@ -11,3 +11,63 @@ mixin card(src, title, price, cardtext)
           p.price= price
             span *
           p.card-text= cardtext
+
+-
+  let cardInfo = {
+      romantic: {
+        img: "img/Card2_1.png",
+        alt: "romantic",
+        mainText: "Романтична подорож на 2",
+        secondText: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+        price: "2599 грн.",
+        flagged: "true",
+        veloflagged: "false",
+      },
+      velotur: {
+        img: "img/Card2_2.png",
+        alt: "velotur",
+        mainText: "Велотур",
+        secondText: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+        price: "555 грн.",
+        flagged: "true",
+        veloflagged: "true",
+      },
+      islands: {
+        img: "img/Card2_3.png",
+        alt: "islands",
+        mainText: "На острови!",
+        secondText: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+        price: "1559 грн.",
+        flagged: "true",
+        veloflagged: "false",
+      },
+      serfing: {
+        img: "img/Card2_4.png",
+        alt: "serfing",
+        mainText: "Катання на сьорфінгу",
+        secondText: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+        price: "999 грн.",
+        flagged: "true",
+        veloflagged: "false",
+      }
+  }
+
+mixin card(oneCard)
+  figure 
+    figcaption 
+      .flex.center 
+          if flagged
+            img(src=oneCard.img, alt=oneCard.alt).figImg.flagged
+          else if veloflaged
+            img(src=oneCard.img, alt=oneCard.alt).figImg.veloflagged
+          else 
+            img(src=oneCard.img, alt=oneCard.alt).figImg
+      p.mainTextCards #{oneCard.mainText}
+      p.secondTextCards #{oneCard.secondText}
+      .row
+        .col
+          p.text-primary-emphasis #{oneCard.price}
+        .col 
+          a(href="#") Замовити 
+            span 
+              img(src="img/arrow2.svg", alt="arrow")

@@ -46,7 +46,7 @@ html(lang="en")
                     p.italic Наша фірма - лідер на ринку у своїй сфері
                     a(href="#choose") 
                         img(src="img/arr.png", alt="double arrow")
-        .container.choose#choose
+        .container.choose#choose.pt-4
             .row 
                 .col-xl-3.col-lg-12 
                     .card.about
@@ -100,4 +100,17 @@ html(lang="en")
                         p.text-light.m-0.pt-5.pt-4-md Олег Набережний
                         p.text-secondary.m-0 клієнт
                         img(src="img/client1.png", alt="client photo").clientPhoto
+        .container-xl.cards.pt-5
+            .row
+                h2.text-center.text-uppercase.fw-normal.fs-1 Спеціальні пропозиції тижня
+                p.text-center.italic Гарячі праозиції, по-швидше обирай і поїхали!
+            .container.d-flex.justify-content-between
+                .col 
+                    +card(cardInfo.romantic)
+                .col 
+                    +card(cardInfo.velotur)
+                .col 
+                    +card(cardInfo.islands)
+                .col 
+                    +card(cardInfo.serfing)
         script(src="js/scripts.js") 
