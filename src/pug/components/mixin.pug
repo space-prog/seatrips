@@ -20,8 +20,7 @@ mixin card(src, title, price, cardtext)
         mainText: "Романтична подорож на 2",
         secondText: "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
         price: "2599 грн.",
-        flagged: "true",
-        veloflagged: "false",
+        flagged: true,
       },
       velotur: {
         img: "img/Card2_2.png",
@@ -29,8 +28,8 @@ mixin card(src, title, price, cardtext)
         mainText: "Велотур",
         secondText: "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
         price: "555 грн.",
-        flagged: "true",
-        veloflagged: "true",
+        flagged: true,
+        veloflagged: true,
       },
       islands: {
         img: "img/Card2_3.png",
@@ -38,8 +37,7 @@ mixin card(src, title, price, cardtext)
         mainText: "На острови!",
         secondText: "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
         price: "1559 грн.",
-        flagged: "true",
-        veloflagged: "false",
+        flagged: true,
       },
       serfing: {
         img: "img/Card2_4.png",
@@ -47,27 +45,40 @@ mixin card(src, title, price, cardtext)
         mainText: "Катання на сьорфінгу",
         secondText: "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
         price: "999 грн.",
-        flagged: "true",
-        veloflagged: "false",
+        flagged: true,
       }
   }
 
-mixin card(oneCard)
-  figure 
+mixin cardSecond(oneCard)
+  figure.secondCards.pb-3 
     figcaption 
       .flex.center 
-          if flagged
-            img(src=oneCard.img, alt=oneCard.alt).figImg.flagged
-          else if veloflaged
-            img(src=oneCard.img, alt=oneCard.alt).figImg.veloflagged
-          else 
-            img(src=oneCard.img, alt=oneCard.alt).figImg
-      p.mainTextCards #{oneCard.mainText}
-      p.secondTextCards #{oneCard.secondText}
-      .row
-        .col
-          p.text-primary-emphasis #{oneCard.price}
-        .col 
-          a(href="#") Замовити 
-            span 
-              img(src="img/arrow2.svg", alt="arrow")
+        if oneCard.veloflagged
+          .container.w-100.p-0.position-relative
+            .cornerBadge.veloflagged
+              span 
+                img(src="img/bicucle.svg", alt="bicucle").bicucle
+              .cornerBadge.flagged
+                span 
+                  img(src="img/star.svg", alt="star")
+            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+        else if oneCard.flagged
+          oneCard.flagged
+          .container.w-100.p-0.position-relative
+            .cornerBadge.flagged
+              span 
+                img(src="img/star.svg", alt="star")
+            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+        else 
+          .container.w-100.p-0.position-relative
+            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+      .container.px-3
+        p.mainTextCards.fs-5.mb-1.pt-3 #{oneCard.mainText}
+        p.secondTextCards.text-secondary #{oneCard.secondText}
+        .row.align-items-center
+          .col
+            p.text-primary.fs-4.m-0 #{oneCard.price}
+          .col
+            a(href="#").text-warning.text-uppercase.d-flex.align-items-center.text-decoration-none.gap-2 Замовити
+              span
+                img(src="img/arrow2.svg", alt="arrow")

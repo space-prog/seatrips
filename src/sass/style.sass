@@ -3,7 +3,7 @@
 *
     margin: 0
     padding: 0
-    
+
 body
     background-color: #f5f8fa
     font-family: "Rubik"
@@ -131,8 +131,8 @@ hr
         padding-top: 20px
         font-size: 13px
         line-height: 19px
-    background: #f5f8fa
-    border: none
+        background: #f5f8fa
+        border: none
 
 .italic
     font-style: italic
@@ -178,7 +178,6 @@ hr
 .clientPhoto, .quotes
     position: absolute
     left: 50%
-    
 
 .clientPhoto
     bottom: 0
@@ -199,3 +198,37 @@ hr
     +media(768)
         font-size: 56px
         line-height: 66px
+
+.flagged
+    position: absolute
+    top: 0
+    left: 0
+    width: 60px
+    height: 60px
+    background-color: #3bbf3b
+    clip-path: polygon(0 0, 100% 0, 0 100%)
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    padding: 8px
+.veloflagged
+    position: absolute
+    top: 0
+    left: 0
+    width: 60px
+    height: 100%
+    background-color: #0091ff
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 36px
+    .bicucle
+        width: 40px
+
+.secondCards
+    transition: all .3s ease
+    &:hover
+        background: #fff
+        box-shadow: 0px 4px 10.5px rgba(3, 20, 31, 0.05)
+.secondTextCards
+    font-size: 15px

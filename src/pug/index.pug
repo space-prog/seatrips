@@ -103,14 +103,16 @@ html(lang="en")
         .container-xl.cards.pt-5
             .row
                 h2.text-center.text-uppercase.fw-normal.fs-1 Спеціальні пропозиції тижня
-                p.text-center.italic Гарячі праозиції, по-швидше обирай і поїхали!
-            .container.d-flex.justify-content-between
-                .col 
-                    +card(cardInfo.romantic)
-                .col 
-                    +card(cardInfo.velotur)
-                .col 
-                    +card(cardInfo.islands)
-                .col 
-                    +card(cardInfo.serfing)
+                p.text-center.italic.pb-3 Гарячі праозиції, по-швидше обирай і поїхали!
+            .container.d-block.d-lg-flex.justify-content-between.gap-4.flex-wrap.flex-lg-nowrap
+                .row
+                    .col-md-6
+                        +cardSecond(cardInfo.romantic)
+                    .col
+                        +cardSecond(cardInfo.velotur)
+                .row
+                    .col-md-6
+                        +cardSecond(cardInfo.islands)
+                    .col
+                        +cardSecond(cardInfo.serfing)
         script(src="js/scripts.js") 
