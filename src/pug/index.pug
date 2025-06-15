@@ -104,7 +104,7 @@ html(lang="en")
             .row
                 h2.text-center.text-uppercase.fw-normal.fs-1 Спеціальні пропозиції тижня
                 p.text-center.italic.pb-3 Гарячі праозиції, по-швидше обирай і поїхали!
-            .container.d-block.d-lg-flex.justify-content-between.gap-4.flex-wrap.flex-lg-nowrap
+            .container.d-block.d-xl-flex.justify-content-between.gap-4.flex-wrap.flex-xl-nowrap
                 .row
                     .col-md-6
                         +cardSecond(cardInfo.romantic)
@@ -115,4 +115,16 @@ html(lang="en")
                         +cardSecond(cardInfo.islands)
                     .col
                         +cardSecond(cardInfo.serfing)
+        .container-xl
+            hr 
+        .container-xl.d-flex 
+            .row 
+                .col 
+                    h2 додаткова інформація
+                .col 
+                    +graphicsCards(graphikInfo.hotels)
+            .row 
+                .col 
+                    +graphicsCards(graphikInfo.eating)
+                .col
         script(src="js/scripts.js") 

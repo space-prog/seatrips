@@ -63,7 +63,6 @@ mixin cardSecond(oneCard)
                   img(src="img/star.svg", alt="star")
             img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
         else if oneCard.flagged
-          oneCard.flagged
           .container.w-100.p-0.position-relative
             .cornerBadge.flagged
               span 
@@ -78,7 +77,39 @@ mixin cardSecond(oneCard)
         .row.align-items-center
           .col
             p.text-primary.fs-4.m-0 #{oneCard.price}
-          .col
+          .col.d-flex.justify-content-end
             a(href="#").text-warning.text-uppercase.d-flex.align-items-center.text-decoration-none.gap-2 Замовити
               span
                 img(src="img/arrow2.svg", alt="arrow")
+
+-
+  let graphikInfo = {
+    hotels: {
+      img: "img/draft.svg",
+      name: "Графік роботи готелів.xls",
+      size: "Розмір файла: 10Mb",
+      secondText: "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
+      bg: "img/cardsBg1.png",
+      class: "hotels",
+    },
+    eating: {
+      img: "img/draft.svg",
+      name: "Інформація про харчування.xls",
+      size: "Розмір файла: 10Mb",
+      secondText: "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
+      bg: "img/cardsBg2.png",
+      class: "eating",
+    }
+  }
+
+mixin graphicsCards(graphicCard)
+  figure.graphicCards 
+    figcaption(class=graphicCard.class)
+      .row 
+        .col 
+          img(src=graphicCard.img, alt="image")
+        .col 
+          .container 
+          .container 
+      .row 
+      .row 
