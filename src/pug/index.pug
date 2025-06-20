@@ -117,14 +117,15 @@ html(lang="en")
                         +cardSecond(cardInfo.serfing)
         .container-xl
             hr 
-        .container-xl.d-flex 
-            .row 
-                .col 
+        .container.d-flex.gap-3
+            .container.d-flex.gap-5
+                .col
                     h2 додаткова інформація
-                .col 
+                .col
                     +graphicsCards(graphikInfo.hotels)
-            .row 
-                .col 
+            .container.d-flex.gap-5
+                .col
                     +graphicsCards(graphikInfo.eating)
                 .col
+                    +graphicsCards(graphikInfo.eating)
         script(src="js/scripts.js") 
