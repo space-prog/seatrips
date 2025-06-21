@@ -119,15 +119,13 @@ html(lang="en")
             hr 
         .container
             .row.gap-2
-                .col-12.col-xxl-3.p-0
+                .col-12.col-lg-3.p-0.max-w-20
                     h2.text-uppercase.fs-1.fw-normal.text-center.text-md-left додаткова інформація
-                .col-12.col-md-9.col-xxl-6.p-0
-                    .row
-                        .col-6
-                            +graphicsCards(graphikInfo.hotels)
-                        .col-6
-                            +graphicsCards(graphikInfo.eating)
-                .col-12.col-lg-3.p-0
+                .col-12.col-lg-3.p-0.max-w-20
+                    +graphicsCards(graphikInfo.hotels)
+                .col-12.col-lg-3.p-0.max-w-20
+                    +graphicsCards(graphikInfo.eating)
+                .col-12.col-lg-3.p-0.max-w-20
                     .befaf.text-center.py-5.px-4.mb-5.befaf2
                         p.topText.fs-6.fs-md-5 задати питання 
                         ul.text-start.fz13.text-secondary.text-center.list-unstyled
