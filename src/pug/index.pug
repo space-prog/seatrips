@@ -117,15 +117,29 @@ html(lang="en")
                         +cardSecond(cardInfo.serfing)
         .container-xl
             hr 
-        .container.d-flex.gap-3
-            .container.d-flex.gap-5
-                .col
-                    h2 додаткова інформація
-                .col
-                    +graphicsCards(graphikInfo.hotels)
-            .container.d-flex.gap-5
-                .col
-                    +graphicsCards(graphikInfo.eating)
-                .col
-                    +graphicsCards(graphikInfo.eating)
+        .container
+            .row.gap-2
+                .col-12.col-xxl-3.p-0
+                    h2.text-uppercase.fs-1.fw-normal.text-center.text-md-left додаткова інформація
+                .col-12.col-md-9.col-xxl-6.p-0
+                    .row
+                        .col-6
+                            +graphicsCards(graphikInfo.hotels)
+                        .col-6
+                            +graphicsCards(graphikInfo.eating)
+                .col-12.col-lg-3.p-0
+                    .befaf.text-center.py-5.px-4.mb-5.befaf2
+                        p.topText.fs-6.fs-md-5 задати питання 
+                        ul.text-start.fz13.text-secondary.text-center.list-unstyled
+                            li Скажіть доброго дня
+                            li нашому консультанту,
+                            li і ми з радістю відповімо
+                            li на Ваші запитання
+                        a(href="tel:+380505698511").fs-5.link-underline-opacity-0.link-underline  
+                            span.d-flex.align-items-center.justify-content-center.text-primary.gap-2.pb-1
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#0099ff"><path d="M0 0h24v24H0z" fill="none"/><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                                | +38 (050) 56 98 511
+                        p.text-dark.m-0.pt-2.pt-4-md.fs-5 Анна Миколаївна
+                        p.text-secondary.m-0.fz13.pb-2 консультант
+                        img(src="img/clientPhoto2.png", alt="client photo").clientPhoto
         script(src="js/scripts.js") 
