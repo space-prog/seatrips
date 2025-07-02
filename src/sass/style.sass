@@ -49,11 +49,14 @@ hr
         opacity: 0.3
         // width: 370px
         height: 10%
-        width: 30%
+        width: 50%
         top: 0
         z-index: 1
         +media(768)
             display: block
+        +media(1024)
+            width: 30%
+
     &::after
         content: ""
         position: absolute
@@ -67,10 +70,12 @@ hr
         // width: 370px
         height: 30%
         bottom: 0
-        width: 30%
+        width: 50%
         z-index: 1
         +media(768)
             display: block
+        +media(1024)
+            width: 30%
     p
         // width: 528px
     button
@@ -283,7 +288,7 @@ hr
 .minwidth
     min-width: 110px
 .minh50
-    min-height: 59px
+    min-height: 78px
 .arrow-hover
     svg
         transition: all .4s ease
@@ -291,4 +296,6 @@ hr
         svg
             transform: translateX(30%)
 .maxwidth30
-    max-width: 130px 
+    max-width: 130px
+.minh70px
+    min-height: 70px 

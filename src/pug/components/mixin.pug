@@ -5,7 +5,8 @@ mixin card(src, title, price, cardtext)
         .badge-star
             span.star
                 img(src="img/star.svg", alt="star")
-        img.card-img-top(src=src, alt="card image")
+        picture
+          img.card-img-top(src=src, alt="card image")
         .card-body
           h5.card-name= title
           p.price= price
@@ -61,23 +62,26 @@ mixin cardSecond(oneCard)
               .cornerBadge.flagged
                 picture 
                   img(src="img/star.svg", alt="star")
-            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+            picture
+              img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
         else if oneCard.flagged
           .container.w-100.p-0.position-relative
             .cornerBadge.flagged
               span 
                 img(src="img/star.svg", alt="star")
-            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+            picture
+              img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
         else 
           .container.w-100.p-0.position-relative
-            img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
+            picture
+              img(src=oneCard.img, alt=oneCard.alt).figImg.w-100
       .container.px-3
-        p.mainTextCards.mb-1.pt-3 #{oneCard.mainText}
+        p.mainTextCards.mb-1.pt-3.minh70px #{oneCard.mainText}
         p.secondTextCards.text-secondary.minh50 #{oneCard.secondText}
         .row.align-items-center
-          .col
+          .col-6
             p.text-primary.fs-4.m-0.minwidth #{oneCard.price}
-          .col.d-flex.justify-content-end
+          .col-6
             a(href="#").text-warning.text-uppercase.d-flex.align-items-center.text-decoration-none.gap-2.hoverOrder.arrow-hover Замовити
               span
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffb700"><path d="m488-440-36 36q-11 11-11 28t11 28q11 11 28 11t28-11l104-104q12-12 12-28t-12-28L508-612q-11-11-28-11t-28 11q-11 11-11 28t11 28l36 36H360q-17 0-28.5 11.5T320-480q0 17 11.5 28.5T360-440h128Zm-8 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
