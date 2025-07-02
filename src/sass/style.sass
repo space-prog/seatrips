@@ -37,8 +37,6 @@ hr
 .adv
     position: relative
     color: #fff
-    +media(768)
-        width: 50%
     &::before
         content: ""
         position: absolute
@@ -51,8 +49,9 @@ hr
         opacity: 0.3
         // width: 370px
         height: 10%
-        width: 50%
+        width: 30%
         top: 0
+        z-index: 1
         +media(768)
             display: block
     &::after
@@ -68,7 +67,8 @@ hr
         // width: 370px
         height: 30%
         bottom: 0
-        width: 50%
+        width: 30%
+        z-index: 1
         +media(768)
             display: block
     p
@@ -278,3 +278,17 @@ hr
 .palmy
     background: url("../img/palmy.png") top/cover
     min-height: 450px
+.width95
+    width: 95%
+.minwidth
+    min-width: 110px
+.minh50
+    min-height: 59px
+.arrow-hover
+    svg
+        transition: all .4s ease
+    &:hover
+        svg
+            transform: translateX(30%)
+.maxwidth30
+    max-width: 130px 
