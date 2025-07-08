@@ -4,6 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
         link(rel="stylesheet", href="css/style.css")
+        link(rel="shortcut icon", href="img/favicon.webp", type="image/x-icon")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -13,11 +14,11 @@ html(lang="en")
         header
             .container-fluid.bg1
                 .container-xl.navbarm
-                    nav.navbar.navbar-expand-lg(data-bs-theme='dark').py-4
+                    nav.navbar.navbar-expand-lg(data-bs-theme='dark').py-4.align-items-center
                         .container-fluid
                             a.navbar-brand(href='#')
                                 picture
-                                    img(src="img/logo.png", alt="logo")
+                                    img(src="img/logo.webp", alt="logo")
                             button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
                                 span.navbar-toggler-icon
                             #navbarSupportedContent.collapse.navbar-collapse.justify-content-end
@@ -47,7 +48,7 @@ html(lang="en")
                             h2 обери свій план подорожі
                         p.italic Наша фірма - лідер на ринку у своїй сфері
                         a(href="#choose") 
-                            img(src="img/arr.png", alt="double arrow")
+                            img(src="img/arr.svg", alt="double arrow")
         main
             section.container.choose#choose.pt-4
                 .row
@@ -63,11 +64,11 @@ html(lang="en")
                     .col
                         .row.justify-content-center
                             .col-lg-4.col-md-6
-                                +card('img/bicucle.png', "Тур на велосипедах", "335 грн", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.")
+                                +card('img/bicucle.svg', "Тур на велосипедах", "335 грн", "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.")
                             .col-lg-4.featured.col-md-6
-                                +card('img/circle.png', "Екскурсія на острів", "500 грн", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.")
+                                +card('img/circle.svg', "Екскурсія на острів", "500 грн", "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року.")
                             .col-lg-4.featured.col-md-6
-                                +card('img/pupil.png', "Особливе замовлення", "250 грн", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.")
+                                +card('img/pupil.svg', "Особливе замовлення", "250 грн", "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.")
                         .row.d-flex.justify-content-center
                             a(href="#").text-center.link-underline-opacity-0.link-underline.d-flex.justify-content-center.column-gap-2.arrow-hover  ДИВИТИСЬ УСІ ПЛАНИ
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#0099ff"><path d="M507-480 384-357l56 57 180-180-180-180-56 57 123 123ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
@@ -77,7 +78,7 @@ html(lang="en")
                 .row
                     .col-md-4
                         picture 
-                            img(src="img/ostriv.png", alt="ostriv").img-fluid.w-100.w-md-40
+                            img(src="img/ostriv.webp", alt="ostriv").img-fluid.w-100.w-md-40
                     .col.text-center-xs.text-left-md.py-3
                         .row
                             h2.text-uppercase.fw-normal Дивовижний безлюдний острів, який зводить людей з розуму
@@ -104,7 +105,7 @@ html(lang="en")
                             p.text-light.m-0.pt-5.pt-4-md Олег Набережний
                             p.text-secondary.m-0 клієнт
                             picture
-                                img(src="img/client1.png", alt="client photo").clientPhoto
+                                img(src="img/client1.webp", alt="client photo").clientPhoto
             .container-xl.cards.pt-5
                 h2.text-center.text-uppercase.fw-normal.fs-1 Спеціальні пропозиції тижня
                 p.text-center.italic.pb-3 Гарячі праозиції, по-швидше обирай і поїхали!
@@ -140,7 +141,7 @@ html(lang="en")
                         p.text-dark.m-0.pt-2.pt-4-md.fs-5 Анна Миколаївна
                         p.text-secondary.m-0.fz13.pb-2 консультант
                         picture
-                            img(src="img/clientPhoto2.png", alt="client photo").clientPhoto
+                            img(src="img/clientPhoto2.webp", alt="client photo").clientPhoto
             section.container-fluid.palmy
         footer.bg-dark.py-3
             p.text-center.text-light.m-0 © 2016 Cars.com All rights reserved.
